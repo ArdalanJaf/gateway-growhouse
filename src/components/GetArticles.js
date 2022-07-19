@@ -11,22 +11,8 @@ function GetArticles() {
     return <p>Error :( </p>;
   }
 
-  function createMarkup(html) {
-    return { __html: html };
-  }
-
-  return data.articles.map(({ title, content, tags }, index) => (
-    // <div key={index}>
-    //   <h2>{title}</h2>
-    //   <div dangerouslySetInnerHTML={createMarkup(content.html)} />
-    //   <p>{tags}</p>
-    // </div>
-    <Article
-      title={title}
-      content={createMarkup(content.html)}
-      tags={tags}
-      index={index}
-    />
+  return data.articles.map((articleData, index) => (
+    <Article key={index} articleData={articleData} />
   ));
 }
 
