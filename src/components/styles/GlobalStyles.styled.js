@@ -20,9 +20,9 @@ const GlobalStyles = createGlobalStyle`
         line-height: 1.5;
     }
 
-    img {
+    /* img {
         max-width: 100%;
-    }
+    } */
 `;
 
 export default GlobalStyles;
